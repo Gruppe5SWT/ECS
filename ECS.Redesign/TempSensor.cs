@@ -19,11 +19,11 @@ namespace ECS.Redesign
 
     public class FakeTempSensor : ITempSensor
     {
-        private int temp { get; set; } = 20;
+        public int Temp { get; set; } = 20;
 
         public int GetTemp()
         {
-            return temp;
+            return Temp;
         }
 
         public bool RunSelfTest()

@@ -8,11 +8,12 @@ namespace ECS.Redesign.Test.Unit
         [SetUp]
         public void Setup()
         {
-            var uut = new ECS(23, new Heater(), new TempSensor());
+            var heater = new FakeHeater();
+            var uut = new ECS(23, heater, new FakeTempSensor());
         }
 
         [Test]
-        public void Regulate_()
+        public void Regulate_TempOverThreshold_HeaterTurnsOff()
         {
             Assert.Pass();
         }
