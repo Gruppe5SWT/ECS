@@ -1,8 +1,8 @@
 ﻿using System;
 
-namespace ECS.Legacy
+namespace ECS.Redesign
 {
-    internal class TempSensor : ITempSensor
+    public class TempSensor : ITempSensor
     {
         private Random gen = new Random();
 
@@ -16,10 +16,10 @@ namespace ECS.Legacy
             return true;
         }
     }
-}
 
-public interface ITempSensor
-{
-    int GetTemp();
-    bool RunSelfTest();
+    public interface ITempSensor
+    {
+        int GetTemp();
+        bool RunSelfTest();
+    }
 }

@@ -1,4 +1,4 @@
-﻿namespace ECS.Legacy
+﻿namespace ECS.Redesign
 {
     public class Heater : IHeater
     {
