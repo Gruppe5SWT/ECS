@@ -68,12 +68,15 @@ namespace ECS.Redesign.Test.Unit
             Assert.That(uut.GetCurTemp().Equals(temp));
         }
 
-        [Test]
-        public void RunSelfTest_RunTest_TestsReturnTrue()
+        [TestCase(true, true, true)]
+        [TestCase(true, false, false)]
+        [TestCase(false, true, false)]
+        [TestCase(false, false, false)]
+        public void RunSelfTest_RunTest_TestsReturnTrue(bool tempTest, bool heatTest, bool uutTest)
         {
-            tempSensor.RunSelfTest().Returns(true);
-            heater.RunSelfTest().Returns(true);
-            Assert.That(uut.RunSelfTest().Equals(true));
+            tempSensor.RunSelfTest().Returns(tempTest);
+            heater.RunSelfTest().Returns(heatTest);
+            Assert.That(uut.RunSelfTest().Equals(uutTest));
         }
 
         [Test]
