@@ -83,5 +83,16 @@ namespace ECS.Redesign.Test.Unit
             heater.RunSelfTest().Returns(true);
             Assert.That(uut.RunSelfTest().Equals(false));
         }
+
+        [Test]
+        public void Regulate_HeaterOffTemperatureGoesLow_HeaterTurnsOn()
+        {
+            heater.TurnOff();
+            tempSensor.GetTemp().Returns(20);
+            uut.Regulate();
+
+            heater.Received(1).TurnOn();
+            heater.Received(1).TurnOff();
+        }
     }
 }
