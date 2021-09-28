@@ -22,11 +22,11 @@ namespace ECS.Redesign.Test.Unit
             uut = new ECS(23, heater, tempSensor);
         }
 
-        [Test]
-        public void ECS_InitialiseECS_ThresholdIsExpected()
-        {
-            Assert.That(uut.GetThreshold().Equals(23));
-        }
+        //[Test]
+        //public void ECS_InitialiseECS_ThresholdIsExpected()
+        //{
+        //    Assert.That(uut.GetThreshold().Equals(23));
+        //}
 
         //[Test]
         //public void Regulate_TempUnderThreshold_HeaterTurnsOn()
@@ -56,17 +56,17 @@ namespace ECS.Redesign.Test.Unit
         //    Assert.That(uut.GetThreshold().Equals(temp));
         //}
 
-        [TestCase(21)]
-        [TestCase(24)]
-        [TestCase(25)]
-        [TestCase(27)]
-        [TestCase(0)]
-        [TestCase(-1)]
-        public void GetCurTemp_GetCurrentTemp_TempSensorReturnsExpected(int temp)
-        {
-            tempSensor.GetTemp().Returns(temp);
-            Assert.That(uut.GetCurTemp().Equals(temp));
-        }
+        //[TestCase(21)]
+        //[TestCase(24)]
+        //[TestCase(25)]
+        //[TestCase(27)]
+        //[TestCase(0)]
+        //[TestCase(-1)]
+        //public void GetCurTemp_GetCurrentTemp_TempSensorReturnsExpected(int temp)
+        //{
+        //    tempSensor.GetTemp().Returns(temp);
+        //    Assert.That(uut.GetCurTemp().Equals(temp));
+        //}
 
         [TestCase(true, true, true)]
         [TestCase(true, false, false)]
