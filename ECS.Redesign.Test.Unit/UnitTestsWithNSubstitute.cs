@@ -79,23 +79,23 @@ namespace ECS.Redesign.Test.Unit
             Assert.That(uut.RunSelfTest().Equals(uutTest));
         }
 
-        [Test]
-        public void RunSelfTest_RunTest_TestsReturnFalse()
-        {
-            tempSensor.RunSelfTest().Returns(false);
-            heater.RunSelfTest().Returns(true);
-            Assert.That(uut.RunSelfTest().Equals(false));
-        }
+        //[Test]
+        //public void RunSelfTest_RunTest_TestsReturnFalse()
+        //{
+        //    tempSensor.RunSelfTest().Returns(false);
+        //    heater.RunSelfTest().Returns(true);
+        //    Assert.That(uut.RunSelfTest().Equals(false));
+        //}
 
-        [Test]
-        public void Regulate_HeaterOffTemperatureGoesLow_HeaterTurnsOn()
-        {
-            heater.TurnOff();
-            tempSensor.GetTemp().Returns(20);
-            uut.Regulate();
+        //[Test]
+        //public void Regulate_HeaterOffTemperatureGoesLow_HeaterTurnsOn()
+        //{
+        //    heater.TurnOff();
+        //    tempSensor.GetTemp().Returns(20);
+        //    uut.Regulate();
 
-            heater.Received(1).TurnOn();
-            heater.Received(1).TurnOff();
-        }
+        //    heater.Received(1).TurnOn();
+        //    heater.Received(1).TurnOff();
+        //}
     }
 }
