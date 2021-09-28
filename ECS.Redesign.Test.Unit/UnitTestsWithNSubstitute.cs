@@ -44,17 +44,17 @@ namespace ECS.Redesign.Test.Unit
             heater.Received(1).TurnOff();
         }
 
-        [TestCase(21)]
-        [TestCase(24)]
-        [TestCase(25)]
-        [TestCase(27)]
-        [TestCase(0)]
-        [TestCase(-1)]
-        public void SetThreshold_SetNew_GetReturnsExcepted(int temp)
-        {
-            uut.SetThreshold(temp);
-            Assert.That(uut.GetThreshold().Equals(temp));
-        }
+        //[TestCase(21)]
+        //[TestCase(24)]
+        //[TestCase(25)]
+        //[TestCase(27)]
+        //[TestCase(0)]
+        //[TestCase(-1)]
+        //public void SetThreshold_SetNew_GetReturnsExcepted(int temp)
+        //{
+        //    uut.SetThreshold(temp);
+        //    Assert.That(uut.GetThreshold().Equals(temp));
+        //}
 
         [TestCase(21)]
         [TestCase(24)]
