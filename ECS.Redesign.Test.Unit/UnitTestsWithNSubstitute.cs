@@ -28,21 +28,21 @@ namespace ECS.Redesign.Test.Unit
             Assert.That(uut.GetThreshold().Equals(23));
         }
 
-        [Test]
-        public void Regulate_TempUnderThreshold_HeaterTurnsOn()
-        {
-            tempSensor.GetTemp().Returns(20);
-            uut.Regulate();
-            heater.Received(1).TurnOn();
-        }
+        //[Test]
+        //public void Regulate_TempUnderThreshold_HeaterTurnsOn()
+        //{
+        //    tempSensor.GetTemp().Returns(20);
+        //    uut.Regulate();
+        //    heater.Received(1).TurnOn();
+        //}
 
-        [Test]
-        public void Regulate_TempOverThreshold_HeaterTurnsOff()
-        {
-            tempSensor.GetTemp().Returns(25);
-            uut.Regulate();
-            heater.Received(1).TurnOff();
-        }
+        //[Test]
+        //public void Regulate_TempOverThreshold_HeaterTurnsOff()
+        //{
+        //    tempSensor.GetTemp().Returns(25);
+        //    uut.Regulate();
+        //    heater.Received(1).TurnOff();
+        //}
 
         //[TestCase(21)]
         //[TestCase(24)]
